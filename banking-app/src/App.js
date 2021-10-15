@@ -7,6 +7,7 @@ import Customers from "./admin/Customers";
 import Transaction from "./admin/Transaction";
 import Profile from "./admin/Profile";
 import ProfileCard from "./admin/ProfileCard";
+import Money from "./admin/Money";
 
 const App = () => {
  
@@ -26,6 +27,9 @@ const App = () => {
         </Route>
         <Route path="/profile">
           <ProfileCard />
+        </Route>
+        <Route path="/money">
+          <Money />
         </Route>
       </Switch>
     </>

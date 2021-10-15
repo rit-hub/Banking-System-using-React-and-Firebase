@@ -35,7 +35,7 @@ const ProfileCard = ({ name, gender }) => {
                 {name}'s Profile
               </Typography>
               <div className="close">
-                <IconButton
+                <IconButton 
                   onClick={() => {
                     setclose(true);
                   }}

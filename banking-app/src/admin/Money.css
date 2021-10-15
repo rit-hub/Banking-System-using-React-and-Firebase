@@ -19,5 +19,17 @@
 }
 .money__right {
   flex: 0.6;
-  background-color: blue;
+  /* background-color: blue; */
+  margin-right: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+
 }

@@ -23,28 +23,7 @@ import ProfileCard from "./ProfileCard";
 //     mobile: 8596748596,
 //     Age: 21,
 //     gender: "Female",
-//   },
-//   {
-//     name: "Ritam Charan",
-//     accNo: 125865789658,
-//     mobile: 8596748596,
-//     Age: 23,
-//     gender: "Male",
-//   },
-//   {
-//     name: "Ritam Charan",
-//     accNo: 125865789658,
-//     mobile: 8596748596,
-//     Age: 23,
-//     gender: "Male",
-//   },
-//   {
-//     name: "Ritam Charan",
-//     accNo: 125865789658,
-//     mobile: 8596748596,
-//     Age: 23,
-//     gender: "Male",
-//   },
+//   }
 // ];
 const Customers = () => {
  
@@ -68,7 +47,7 @@ const Customers = () => {
           <MaterialTable
             style={{ minHeight: "50vh", cursor: "pointer" }}
             columns={[
-              { title: "Full Name", field: "name" },
+              { title: "Full Name", field: "fname" },
               // { title: "Gender", field: "gender" },
               { title: "Age", field: "Age", type: "numeric" },
               { title: "Account No.", field: "accNo", type: "numeric" },
@@ -101,7 +80,7 @@ const Customers = () => {
       </div>
     );
   } else {
-    return <ProfileCard name={user.name} gender={user.gender} />;
+    return <ProfileCard name={user.lname} gender={user.gender} />;
   }
 };
 
