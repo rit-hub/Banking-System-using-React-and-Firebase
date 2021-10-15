@@ -1,0 +1,23 @@
+.money {
+  display: flex;
+  /* background-color: red; */
+  height: 90vh;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.money__left {
+  /* background-color: blue; */
+  flex: 0.4;
+  display: flex;
+  align-items: center;
+}
+.money__image {
+  margin-left: 4rem;
+}
+.money__image img {
+  height: 50vh;
+}
+.money__right {
+  flex: 0.6;
+  background-color: blue;
+}

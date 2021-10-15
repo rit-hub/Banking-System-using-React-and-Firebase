@@ -1,0 +1,21 @@
+.appbar__right {
+  display: flex;
+  /* background-color: red; */
+}
+.appbar__rightChild {
+  padding-right: 40px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  flexgrow: 1;
+  cursor: pointer;
+}
+.app_items {
+  display: flex;
+  justify-content: space-between;
+}

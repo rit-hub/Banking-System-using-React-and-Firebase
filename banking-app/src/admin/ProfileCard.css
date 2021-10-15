@@ -1,0 +1,117 @@
+.profile {
+  display: flex;
+  flex: 1;
+  height: 90vh;
+  /* background-color: red; */
+  flex-wrap: wrap;
+}
+
+.profile__left {
+  flex: 0.35;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile__image {
+  /* background-color: red; */
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 50%;
+}
+.profile__image img {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 40vh;
+  width: 40vh;
+}
+.profile__right {
+  margin-top: 20px;
+  flex: 0.65;
+  /* background-color: blue; */
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.card {
+  background-color: white;
+  margin: 10px;
+  height: 80vh;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding-left: 20px;
+}
+.MyCustomButton:hover {
+  background-color: inherit !important;
+}
+.heading {
+  flex: 0.15;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.heading__title {
+  /* background-color: blue; */
+  margin-left: 50px;
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+}
+.close {
+  background-color: ivory;
+  flex: 0.1;
+  margin-right: 30px;
+}
+.personal {
+  flex: 0.5;
+  /* background-color: blue; */
+}
+.personal__heading,
+.account__heading {
+  padding-left: 30px;
+  padding-top: 5px;
+}
+.personal__info,
+.account__info {
+  display: flex;
+  flex: 1;
+  height: 85%;
+  padding-left: 120px;
+
+  padding-right: 20px;
+  padding-bottom: 5px;
+  justify-content: space-between;
+}
+.personal__left,
+.account__left {
+  flex: 0.5;
+  /* background-color: greenyellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 20px;
+}
+.personal__right,
+.account__right {
+  flex: 0.5;
+  /* background-color: rgb(255, 158, 47); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.account {
+  flex: 0.35;
+  /* background-color: green; */
+  margin-bottom: 15px;
+}
+
+span {
+  padding-left: 30px;
+}

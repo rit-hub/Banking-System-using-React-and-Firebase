@@ -1,0 +1,26 @@
+.transaction {
+  display: flex;
+  /* background-color: violet; */
+  height: 90vh;
+  flex: 1;
+}
+.left {
+  flex: 0.3;
+  /* background-color: tomato; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left img {
+  height: 40vh;
+}
+.right {
+  align-items: center;
+  justify-content: center;
+  flex: 0.7;
+  /* background-color: tomato; */
+  display: flex;
+}
+.table {
+  min-width: 80% !important;
+}
