@@ -4,6 +4,7 @@
   height: 90vh;
   flex: 1;
   flex-wrap: wrap;
+  margin-top: 70px;
 }
 .money__left {
   /* background-color: blue; */
@@ -23,11 +24,11 @@
   margin-right: 30px;
   margin-bottom: 30px;
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
   /* background-color: aqua; */
-  padding: 20px;
-  margin-top: 20px;
+  
+
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   transition: 0.3s;

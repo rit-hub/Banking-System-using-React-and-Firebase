@@ -1,6 +1,6 @@
 import image from "../assets/moneyTransfer.svg";
 import "./Money.css";
-import TransferForm from "./TransferForm";
+import Form from "../admin/newForm/form";
 
 const Money = () => {
   return (
@@ -11,7 +11,8 @@ const Money = () => {
         </div>
       </div>
       <div className="money__right">
-        <TransferForm />
+        {/* <TransferForm /> */}
+        <Form />
       </div>
     </div>
   );
