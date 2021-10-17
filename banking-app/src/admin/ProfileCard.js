@@ -6,8 +6,27 @@ import CloseIcon from "@mui/icons-material/Close";
 import { IconButton } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import Customers from "./Customers";
+import { Panorama } from "@mui/icons-material";
 
-const ProfileCard = ({ name, gender }) => {
+const ProfileCard = ({
+  fname,
+  lname,
+  gender,
+  accNo,
+  addhar,
+  address,
+  balence,
+  branchName,
+  debitCard,
+  dob,
+  email,
+  ifsc,
+  mobile,
+  nominee,
+  pan,
+  status,
+  upi,
+}) => {
   console.log(gender);
   const [close, setclose] = useState(false);
   const [image, setImage] = useState(image1);
@@ -32,10 +51,10 @@ const ProfileCard = ({ name, gender }) => {
                 component="h4"
                 className="heading__title"
               >
-                {name}'s Profile
+                {fname}'s Profile
               </Typography>
               <div className="close">
-                <IconButton 
+                <IconButton
                   onClick={() => {
                     setclose(true);
                   }}
@@ -54,36 +73,37 @@ const ProfileCard = ({ name, gender }) => {
               <div className="personal__info">
                 <div className="personal__left">
                   <Typography variant="h6" component="h5">
-                    Full Name: <span>Akshay Kumar</span>
+                    Full Name:{" "}
+                    <span>
+                      {fname} {lname}
+                    </span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    Gender: <span>Male</span>
+                    Gender: <span>{gender}</span>
+                  </Typography>
+
+                  <Typography variant="h6" component="h5">
+                    Email: <span>{email}</span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    DOB: <span>01/05/22</span>
-                  </Typography>
-                  <Typography variant="h6" component="h5">
-                    Email: <span>error@gmail.com</span>
-                  </Typography>
-                  <Typography variant="h6" component="h5">
-                    Mobile Number: <span>8272990659</span>
+                    Mobile Number: <span>{mobile}</span>
                   </Typography>
                 </div>
                 <div className="personal__right">
                   <Typography variant="h6" component="h5">
-                    Nominee Name: <span>NA</span>
+                    Nominee Name: <span>{nominee}</span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    Material Status: <span>Single</span>
+                    Material Status: <span>{status}</span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    PAN Number: <span>AEXIV9624L</span>
+                    PAN Number: <span>{pan}</span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    Addhar Number: <span>1234 5678 2569</span>
+                    Addhar Number: <span>{addhar}</span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    Address: <span>X-Colony, Howrah-711356</span>
+                    Address: <span>{address}</span>
                   </Typography>
                 </div>
               </div>
@@ -97,24 +117,24 @@ const ProfileCard = ({ name, gender }) => {
               <div className="account__info">
                 <div className="account__left">
                   <Typography variant="h6" component="h5">
-                    Branch Name: <span>Howrah</span>
+                    Branch Name: <span>{branchName}</span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    IFSC Code: <span>UBI00025986</span>
+                    IFSC Code: <span>{ifsc}</span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    Active UPI: <span>85695842@okgoogle</span>
+                    Active UPI: <span>{upi}</span>
                   </Typography>
                 </div>
                 <div className="account__right">
                   <Typography variant="h6" component="h5">
-                    Account Number: <span>011265742258</span>
+                    Account Number: <span>{accNo}</span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    Available Balence: <span>36,000</span>
+                    Available Balence: <span>{balence}</span>
                   </Typography>
                   <Typography variant="h6" component="h5">
-                    Active Debit Card: <span>XXXX-XXXX-X598</span>
+                    Active Debit Card: <span>{debitCard}</span>
                   </Typography>
                   {/* // balenca */}
                 </div>

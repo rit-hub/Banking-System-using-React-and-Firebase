@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -15,9 +15,17 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
+import db from "../../firebase";
 const theme = createTheme();
 
 export default function Form() {
+  let textInput = useRef(null);
+  let textInput2 = useRef(null);
+  let textInput3 = useRef(null);
+  let textInput4 = useRef(null);
+  let textInput5 = useRef(null);
+  let textInput6 = useRef(null);
+
   const [formData, setformData] = useState({});
   const [purpose, setPurpose] = useState("");
   const [amount, setAmount] = useState("");
@@ -25,11 +33,33 @@ export default function Form() {
   const [error, setError] = useState({});
   const [validation, setValidation] = useState(true);
   const [showAlart, setShowAlart] = useState(false);
+  const [storeData, setStoreData] = useState({});
 
   useEffect(() => {
-    if (Object.keys(formData).length && !validation) {
-      setShowAlart(true);
-      console.log(formData);
+    if (
+      Object.keys(formData).length &&
+      !validation &&
+      amount != "" &&
+      account != ""
+    ) {
+      let info2 = {
+        ...formData,
+        date: new Date().toLocaleString(),
+        status: "successful",
+        tid: Math.ceil(Math.random() * 111) * 1256525698,
+      };
+      setStoreData(info2);
+      if (Object.keys(storeData).length) {
+        db.collection("transactions").add(storeData);
+        console.log(storeData);
+        setShowAlart(true);
+        textInput.current.value = "";
+        textInput2.current.value = "";
+        textInput3.current.value = "";
+        textInput4.current.value = "";
+        textInput5.current.value = "";
+        textInput6.current.value = "";
+      }
     }
   }, [formData]);
 
@@ -158,6 +188,7 @@ export default function Form() {
                   id="amount"
                   label="Amount"
                   autoFocus
+                  inputRef={textInput}
                   onChange={checkAmount}
                   {...(error.amountError && {
                     error: true,
@@ -171,6 +202,7 @@ export default function Form() {
                   fullWidth
                   id="confAmount"
                   label="Confirm Amount"
+                  inputRef={textInput2}
                   name="confAmount"
                   onChange={checkConfAmount}
                   {...(error.confAmountError && {
@@ -186,6 +218,7 @@ export default function Form() {
                   id="account"
                   label="Account Number"
                   name="account"
+                  inputRef={textInput3}
                   onChange={checkAccount}
                   {...(error.accountError && {
                     error: true,
@@ -199,6 +232,7 @@ export default function Form() {
                   fullWidth
                   name="confAccount"
                   label="Confirm Account"
+                  inputRef={textInput4}
                   id="confAccount"
                   onChange={checkConfAccount}
                   {...(error.confAccountError && {
@@ -212,6 +246,7 @@ export default function Form() {
                   fullWidth
                   name="name"
                   label="Full Name"
+                  inputRef={textInput5}
                   id="name"
                   autoComplete="family-name"
                 />
@@ -222,6 +257,7 @@ export default function Form() {
                   <Select
                     labelId="select-purpose"
                     id="select-purpose"
+                    inputRef={textInput6}
                     value={purpose}
                     label="Purpose"
                     onChange={handleSelectChange}
@@ -229,7 +265,7 @@ export default function Form() {
                     <MenuItem value="">
                       <em>None</em>
                     </MenuItem>
-                    <MenuItem value={1}>Deposite</MenuItem>
+                    <MenuItem value={"Deposite"}>Deposite</MenuItem>
                     <MenuItem value={"Payment"}>Payment</MenuItem>
                     <MenuItem value={"Gift"}>Gift</MenuItem>
                   </Select>

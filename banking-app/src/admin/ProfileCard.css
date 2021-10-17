@@ -65,7 +65,6 @@
   justify-content: center;
 }
 .close {
-  background-color: ivory;
   flex: 0.1;
   margin-right: 30px;
 }
